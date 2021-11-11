@@ -1,0 +1,16 @@
+# git status
+para saber estado de la carpeta, que cosas estan en comit y que cosas no
+# git clone direccion https o ssh
+intentar que siempre sea la ssh, se usa para clonar un repo desde la web a mi local
+1. crear una nueva carpeta en tu computador, entrar y darle # git init para iniciar el repo en
+local y crear la carpeta git.
+2. # git remote add origin enlace ssh para enlazar el repo de local con el que creamos en la web.
+3. para saber si quedo enlazado usamos el comando # git remote -v y debe aparecer el link del repo
+tanto para fetch como el de main.
+4. se debe revisar si la rama coincide, en caso de no coincidan se puede cambiar la del local
+con el comando # git branch -m nombre-rama nombre-rama-nueva
+5. revisar que al iniciar el repo en la web no seleccionar archivos como .gitnore o README.md porque
+de crearlos despues de hacer el git clone, se tendria que hacer un git pull para traerlos a local.
+6. si no tienes llave en tu maquina debes crearla con el siguiente comando # ssh-keygen -t rsa -b 4096 -C “tu_email@gmail.com”
+7. evaluar si la llave esta corriendo en el servidor con el siguiente comando # eval $(ssh-agent -s)
+8. agregar la ssh al sistema por medio del siguiente comando # ssh-add ~/.ssh/id_rsa
