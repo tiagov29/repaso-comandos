@@ -14,3 +14,47 @@ de crearlos despues de hacer el git clone, se tendria que hacer un git pull para
 6. si no tienes llave en tu maquina debes crearla con el siguiente comando # ssh-keygen -t rsa -b 4096 -C “tu_email@gmail.com”
 7. evaluar si la llave esta corriendo en el servidor con el siguiente comando # eval $(ssh-agent -s)
 8. agregar la ssh al sistema por medio del siguiente comando # ssh-add ~/.ssh/id_rsa
+9. el comando git config --global user.name "username" and  git config --global user.name "username" se hacen una vez
+por maquina.
+
+git commands:
+
+
+for-changing-of-branch: git checkout nameOfBranch
+to-check-different-commits-in-different-branch: git log --oneline --decorate --graph --all
+to-check-whats-happening-between-branch: git reflog
+to-save-changes-in-one-branch-to-stack: git stash
+to-see-stack: git stash list
+to-see-changes: git diff
+to-pull-things-of-stack: git pop
+to-create-branch: git checkout -b nameOfBranch
+to-add-only-documents-I'm-working: git add -A
+to-update-project-in-another-branch: git rebase
+git-diff: you can see the diffence between two branches.
+git-remote -v: repositories asociate to local.
+git-remote-add: add new repo to my local.
+git-merge: in order to merge changes from another branch I must be in the branch where i want
+to add de changes and use the git log in order to verify, you can check te commits.
+to merge another branch without to have a record of the old branch: git rebase, de esta manera los commits de la rama
+que se agrego quedan de primeros encima de los commits que fueron hechos en la rama donde se agrego
+in order to re write the last commit : git commit -a
+se deben tener 3 ramas: la master, la previa a pasar al main y la de la funcionabilidad en la
+que estoy trabajando.
+in order to come back to the last version: git reset nameOfFile
+in order to come back to the las commit: git reseet nameOfCommit
+in order to see the commit history: git log
+in order to se the meta data: git show  nameOfCommit
+in order to get a version: git tag tagName
+for checking the branch : git branch -a
+for checking where my git is connected: git remote -v
+in order to change the name of the branch: git remote rename nameOfBranch newName
+in order to create a new branch: git branch nameOfBranch
+in order to delete branch in local: git branch --delete nameOfBranch
+in order to delete branch in local: git push origin --delete nameOfBranch
+para enlazar los repositorios: git remote add
+
+
+in order to link with bitbucket:
+
+ssh-add ~/valencia para agregar la ssh al sistema. en caso de no tener cconexion
+eval $(ssh-agent -s) para hacer conexion con ssh
