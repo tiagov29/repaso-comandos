@@ -58,3 +58,5 @@ in order to link with bitbucket:
 
 ssh-add ~/valencia para agregar la ssh al sistema. en caso de no tener cconexion
 eval $(ssh-agent -s) para hacer conexion con ssh
+
+ssh-add rutassh para agregar llave
