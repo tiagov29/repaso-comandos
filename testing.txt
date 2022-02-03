@@ -60,3 +60,25 @@ ssh-add ~/valencia para agregar la ssh al sistema. en caso de no tener cconexion
 eval $(ssh-agent -s) para hacer conexion con ssh
 
 ssh-add rutassh para agregar llave
+
+PARA COMBINAR RAMAS
+
+git fetch --all para verificar si en el repo de la nube hay nuevos cambios que no han sido traidos a local
+
+git pull origin develop para traerse los cambios del repo de la nube
+
+git rebase develop : nos paramos en la rama que queremos fucionar y ponemos git rebase <la rama a la que queremos pegarnos> desde la rama que
+queremos fusionar
+
+git checkout develop(rama donde queramos fucionar todo (develop))
+
+git merge <nombre de la rama donde estan los cambios (feature/get-quejas)
+
+git rebase --continue
+
+git branch --delete <nombre de la rama que se quiere eliminar> (no de puede estar parado en la rama que se quiere eliminar)
+
+git push origin --delete <nombre de la rama que se quiere eliminar en el repo que esta en la nube> para eliminar la rama
+del repo en la nube
+
+despues de resolver un conflicto se le da git add -A
